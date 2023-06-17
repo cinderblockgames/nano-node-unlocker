@@ -1,0 +1,5 @@
+#!/bin/sh
+
+password=$(cat $PASSWORD_FILE)
+
+curl -d "{ \"action\": \"password_enter\", \"wallet\": \"$WALLET\", \"password\": \"$password\" }" $NODE
